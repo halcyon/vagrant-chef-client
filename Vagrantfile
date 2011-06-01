@@ -4,7 +4,7 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "oel56-work-rvm-05-20-2011"
+  config.vm.box = "oel56-work-rvm-06-01-2011"
 
   config.vm.forward_port "web", 3000, 8080, :auto => true
 
