@@ -16,7 +16,7 @@ Vagrant::Config.run do |config|
   config.vm.share_folder "v-data", "/vagrant_data", "data"
 
   config.vm.provision :chef_server do |chef|
-    chef.node_name = "redmine"
+    chef.node_name = "vagrant-natty-amd64"
     chef.chef_server_url = "http://zeddworks.com:4000"
     chef.validation_key_path = "#{ENV['HOME']}/.chef/validation.pem"
   end
