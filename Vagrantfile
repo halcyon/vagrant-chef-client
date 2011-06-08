@@ -4,7 +4,7 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "oel56-work-rvm-06-01-2011"
+  config.vm.box = "vagrant-oel56-amd64-rvm-06-08-2011"
 
   config.vm.forward_port "web", 3000, 8080, :auto => true
 
@@ -15,7 +15,7 @@ Vagrant::Config.run do |config|
   config.vm.share_folder "v-data", "/vagrant_data", "data"
 
   config.vm.provision :chef_server do |chef|
-    chef.node_name = "vagrant-oel56-work"
+    chef.node_name = "vagrant-chef-client"
     chef.chef_server_url = "http://zeddworks.com:4000"
     chef.validation_key_path = "#{ENV['HOME']}/.chef/validation.pem"
   end
