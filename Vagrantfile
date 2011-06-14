@@ -7,7 +7,7 @@ Vagrant::Config.run do |config|
   config.vm.box = "vagrant-oel56-amd64-rvm-06-12-2011-661e8f"
   config.vm.box_url = "http://www.zeddworks.com/vagrant-oel56-amd64-rvm-06-12-2011-661e8f.box"
 
-  config.vm.forward_port "web", 3000, 8080, :auto => true
+  config.vm.forward_port "web", 8080, 8080, :auto => true
 
   config.vm.customize do |vm|
     vm.memory_size = 2048
